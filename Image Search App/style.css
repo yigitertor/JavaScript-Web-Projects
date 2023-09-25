@@ -72,8 +72,48 @@ form{
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .search-result:hover img {
   opacity: 0.8;
+}
+
+.search-result a {
+  font-size: 20px;
+  text-decoration: none;
+  color: #333;
+  display: block;
+  text-transform: capitalize;
+  padding: 10px;
+}
+
+#show-more-button{
+  background-color: #008cba;
+  font-size: 18px;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  display: block;
+  margin: 30px auto;
+  border-radius: 10px;
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width:768px) {
+  .search-results{
+    padding: 20px;
+  }
+
+  .search-result{
+    width: 45%;
+  }
+}
+
+@media screen and (max-width:480px) {
+  .search-result{
+    width: 100%;
+  }
 }
