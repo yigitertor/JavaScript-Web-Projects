@@ -35,5 +35,20 @@
         </div>
       </div>
     </div>
+
+    <script>
+      const apiKey = "8297725875f39e37ed6a7bc2e1fc738c";
+      const apiUrl =
+        "https://api.openweathermap.org/data/2.5/weather?units=metric&q=antalya";
+
+      async function checkWeather() {
+        const response = await fetch(apiUrl + `&appid=${apiKey}`);
+        var data = await response.json();
+
+        console.log(data);
+      }
+
+      checkWeather();
+    </script>
   </body>
 </html>
