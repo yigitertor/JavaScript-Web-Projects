@@ -9,7 +9,7 @@
   <body>
     <div class="card">
       <div class="search">
-        <input type="text" placeholder="City Name" spellcheck="false" />
+        <input type="text" placeholder="Search City" spellcheck="false" />
         <button><img src="images/search.png" /></button>
       </div>
       <div class="weather">
@@ -36,19 +36,6 @@
       </div>
     </div>
 
-    <script>
-      const apiKey = "8297725875f39e37ed6a7bc2e1fc738c";
-      const apiUrl =
-        "https://api.openweathermap.org/data/2.5/weather?units=metric&q=antalya";
-
-      async function checkWeather() {
-        const response = await fetch(apiUrl + `&appid=${apiKey}`);
-        var data = await response.json();
-
-        console.log(data);
-      }
-
-      checkWeather();
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
